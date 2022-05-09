@@ -1,12 +1,12 @@
 const { Contact } = require('../../models/contact');
-async function getAll(res, req) {
-  const result = await Contact.find({});
+const getAll = async (req, res) => {
+  const response = await Contact.find({});
   res.json({
     status: 'success',
     code: 200,
     data: {
-      result,
+      response,
     },
   });
-}
+};
 module.exports = getAll;
