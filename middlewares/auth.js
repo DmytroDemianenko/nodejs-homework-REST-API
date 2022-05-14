@@ -6,7 +6,8 @@ const auth = async (req, res, next) => {
   try {
     const { authorization = '' } = req.headers;
     const [bearer, token] = authorization.split('');
-    if (bearer !== 'bearer') {
+    console.log(authorization.bearer);
+    if (bearer !== 'Bearer') {
       throw createError(401);
     }
     try {
