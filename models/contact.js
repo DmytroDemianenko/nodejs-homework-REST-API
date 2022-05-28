@@ -28,12 +28,16 @@ const addSchema = Joi.object({
   phone: Joi.number().required(),
   favorite: Joi.bool(),
 });
+
 const updateFavoriteSchema = Joi.object({
   favorite: Joi.bool().required(),
 });
-const schemas = {
-  add: addSchema,
-  favoriteSchema: updateFavoriteSchema,
-};
+
+// const schemas = {
+//   add: addSchema,
+//   favoriteSchema: updateFavoriteSchema,
+// };
+
 const Contact = model('contact', contactSchema);
-module.exports = { Contact, schemas };
+
+module.exports = { Contact, addSchema, updateFavoriteSchema };
