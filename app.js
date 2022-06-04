@@ -37,6 +37,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-// Dmytro;
-// V7WxueJwKzBELPGl;
-// mongodb+srv://Dmytro:V7WxueJwKzBELPGl@cluster0.8mxw1.mongodb.net/db-contacts?retryWrites=true&w=majority
